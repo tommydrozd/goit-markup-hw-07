@@ -1233,7 +1233,10 @@ letter-spacing: 0.4px;
  }
  .list-s-two-flex-gap {
   flex-wrap: nowrap;
-  
+}
+.list-flex-gap {
+  display: flex;
+  gap: 40px;
 }
 .icon-wrapper {
   background-color: var(--background-color2);
