@@ -86,7 +86,7 @@ h1 {
 
 
 .container {
-width: 100%;
+  width: 100%;
   max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
@@ -337,6 +337,7 @@ text-transform: capitalize;
   justify-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 72px;
 }
 .footer-p {
   line-height: 1.5;
@@ -520,12 +521,11 @@ letter-spacing: 0.4px;
 
 .values {
   display: flex;
-  justify-content: space-between;
   gap: 24px;
 }
 
 .values > li {
-  width: calc(25% - 24px);
+  width: 356px;
 }
 
 .icon-wrapper {
@@ -587,12 +587,11 @@ letter-spacing: 0.4px;
 
 .customers-list {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 72px;
+  column-gap: 24px;
+  justify-content: center;
 }
-
-
 
 .customer-logo {
   width: 100%;
@@ -648,7 +647,8 @@ letter-spacing: 0.4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
+  max-width: 408px;
+  width: 90%;
   min-height: 584px;
   background: #fcfcfc;
   border-radius: 4px;
@@ -1001,6 +1001,9 @@ flex-shrink: 0;
  }
 
  .mobile-nav-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: Roboto;
 font-size: 36px;
 font-style: normal;
@@ -1015,6 +1018,7 @@ text-transform: capitalize;
   flex-flow: column nowrap;
   padding: 24px;
   gap: 20px;
+  flex-grow: 2;
  }
 
  .mobile-nav-layout .main-menu .current-link::after {
@@ -1051,12 +1055,14 @@ letter-spacing: 0.4px;
  }
 
  .js-menu-container .footer-social-ul {
-  display: inline-flex;
-align-items: flex-start;
-gap: 56px; 
-padding-top: 48px;
-padding-left: 24px;
-padding-bottom: 40px;
+  display: flex;
+  max-width: 328px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
  }
 
  .js-menu-container {
@@ -1101,6 +1107,7 @@ padding: 0 24 24 0;
  .menu-layout {
   display: none;
  }
+
  .index-section-first-header {
   color: white;
 font-size: 36px;
@@ -1110,6 +1117,10 @@ text-transform: capitalize;
 line-height: 40px;
 letter-spacing: 0.72px;
 word-wrap: break-word 
+ }
+
+ .main-index-section-first {
+  padding: 112px;
  }
 
  .body {font-family: Roboto;
@@ -1122,18 +1133,27 @@ word-wrap: break-word
 
 .punkt-listydwa {
   max-width: 264px;
-  flex-basis: calc(50% - 24px);
   width: calc((100% - 72px) / 1);
   border-radius: 0px 0px 4px 4px;
 }
 
 .customer-logo-list {
-  flex-basis: calc((100% - 120px) / 2;)
-  width: calc((100% - 120px) / 6);
   height: 88px;
+  width: 168px;
 }
 .social-svg {
   gap: 8px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--second-color-text);
 }
 }
 
@@ -1229,6 +1249,14 @@ text-align: center;
   flex-basis: calc((100% - 120px);)
   width: calc((100% - 120px) / 6);
   height: 88px;
+}
+
+.div-foot-whole {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 72px;
 }
 
 .footer-form {
