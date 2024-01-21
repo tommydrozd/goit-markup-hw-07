@@ -69,9 +69,12 @@ h1 {
 }
 
 .address {
+  display: flex;
+flex-wrap: wrap;
+align-items: center;
   font-style: normal;
   font-weight: 400;
-  padding: 24px 0;
+  
 }
 
 .link-address {
@@ -328,14 +331,6 @@ text-transform: capitalize;
   background-color: var(--background-color1);
 }
 
-.div-foot-whole {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 72px;
-}
 .footer-p {
   line-height: 1.5;
   color: var(--background-color2);
@@ -547,7 +542,7 @@ letter-spacing: 0.4px;
 .social-svg {
   display: flex;
   list-style-type: none;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
  
 }
@@ -1100,24 +1095,35 @@ padding: 0 24 24 0;
                                     url("../images/people-bg@2x.jpg");}
  }
 
-@media (min-width:480px) {
+@media (min-width:320px), (max-width:767px) {
  .menu-layout {
   display: none;
  }
 
  .index-section-first-header {
-  color: white;
-font-size: 36px;
-font-family: Roboto;
-font-weight: 700;
-text-transform: capitalize;
-line-height: 40px;
-letter-spacing: 0.72px;
-word-wrap: break-word 
+  color: var(--WHITE, #FFF);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
  }
 
+ .div-foot-whole {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  gap: 72px;
+}
+
  .main-index-section-first {
-  padding: 112px;
+  padding: 112px 0 112px 0;
+
  }
 
  .body {font-family: Roboto;
@@ -1160,19 +1166,34 @@ word-wrap: break-word
     display: flex;
   }
 
+  .main-index-section-first {
+    padding: 112px 0 112px 0;
+   }
+
+   .index-section-first-header {
+    color: var(--WHITE, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 107.143% */
+    letter-spacing: 1.12px;
+   }
+
   .punkt-listy {
     flex-basis: calc((100% - 72px)/2);
   }
 
   .link-address {
-    color: var(--SLATE, #434455);
-/* Small Text */
-font-family: Roboto;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 14px; /* 116.667% */
-letter-spacing: 0.48px; 
+  color: var(--SLATE, #434455);
+  /* Small Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px; 
   }
   .heading-values {
     color: var(--NAVY-BLUE, #2E2F42);
@@ -1201,29 +1222,38 @@ letter-spacing: 0.48px;
     justify-content: center;
   }
 
-  .customers-list {
-    flex-basis: calc((100% - 120px) / 3;)
-    justify-content: center;
-  }
+ 
   .customer-logo-list {
-    flex-basis: calc((100% - 120px) / 3;)
+    flex-basis: calc((100% - 120px) / 3);
     width: calc((100% - 120px) / 6);
     height: 88px;
   }
   .pracownik-h-trzy {
     text-align: center;
     font-family: Roboto;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 120% */
-letter-spacing: 0.4px; 
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px; 
   }
 
   .logo {
     margin-right: 120px;
   }
 
+  .div-foot-whole {
+    display: flex;
+align-items: center;
+justify-content: center;
+gap: 72px;
+flex-direction:row;
+  }
+  .form {
+    display: flex;
+gap: 24px;
+flex-wrap: nowrap;
+  }
 }
 
 
@@ -1247,7 +1277,16 @@ letter-spacing: 0.4px;
   border-radius: 4px;
   margin-bottom: 8px;
 }
-
+.index-section-first-header {
+  color: var(--WHITE, #FFF);
+text-align: center;
+font-family: Roboto;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 107.143% */
+letter-spacing: 1.12px;
+}
 .heading-values {
   color: var(--NAVY-BLUE, #2E2F42);
 font-family: Roboto;
@@ -1264,22 +1303,24 @@ text-align: center;
 }
 
 .customer-logo-list {
-  flex-basis: calc((100% - 120px);)
+  flex-basis: calc((100% - 120px) / 6);
   width: calc((100% - 120px) / 6);
   height: 88px;
 }
 
 .div-foot-whole {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  justify-content: center;
-  gap: 72px;
+  flex-wrap: nowrap;
 }
+
+.form {
+  display: flex;
+}
+
 
 .footer-form {
   margin-left: 80px;
-  display: block;
+  display: flex;
 }
 .footer-logop-div {
   margin-right: 120px;
@@ -1295,4 +1336,8 @@ text-align: center;
 .pracownik-h-trzy {
   text-align: center;
 }
+
+.main-index-section-first {
+  padding: 188px 0 188px 0;
+ }
 }
